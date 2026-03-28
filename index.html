@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Application Title -->
+  <title>Shark Group - نظام الإدارة الذكي</title>
+
+  <!-- Meta Tags -->
+  <meta name="description"
+    content="نظام إدارة التجزئة الاحترافي من Shark Group لتتبع المبيعات والمنتجات والمخزون بكفاءة." />
+  <meta name="author" content="Shark Group" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="/logo.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://retailflow.app/" />
+  <meta property="og:title" content="Shark Group - نظام الإدارة الذكي" />
+  <meta property="og:description"
+    content="قم بتبسيط عمليات التجزئة الخاصة بك من خلال حل الإدارة الشامل من Shark Group." />
+  <meta property="og:image" content="/logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Shark Group - نظام الإدارة الذكي" />
+  <meta property="twitter:description"
+    content="قم بتبسيط عمليات التجزئة الخاصة بك من خلال حل الإدارة الشامل الخاص بنا." />
+  <meta property="twitter:image" content="/logo.png" />
+
+  <!-- Preloader Styles -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .app-loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: #000000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out;
+    }
+
+    .logo-container {
+      position: relative;
+      margin-bottom: 2.5rem;
+      perspective: 1000px;
+    }
+
+    .app-logo-svg {
+      width: 140px;
+      height: 140px;
+      filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
+      animation: logo-entrance 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards,
+        glow 3s ease-in-out infinite alternate;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 2px solid rgba(255, 215, 0, 0.1);
+      border-top: 2px solid #fbbf24;
+      border-radius: 50%;
+      animation: spin 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    }
+
+    .loading-text {
+      margin-top: 1.5rem;
+      color: #fbbf24;
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes logo-entrance {
+      0% {
+        transform: scale(0.5) rotateY(-90deg);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1) rotateY(0deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes glow {
+      from {
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+      }
+
+      to {
+        filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 0.5;
+        transform: scale(0.98);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Professional Loading State -->
+    <div class="app-loader">
+      <div class="logo-container">
+        <svg class="app-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fbbf24" />
+              <stop offset="50%" stop-color="#fef3c7" />
+              <stop offset="100%" stop-color="#d97706" />
+            </linearGradient>
+          </defs>
+          <!-- Hexagon Background -->
+          <path d="M50 5 L89 27.5 L89 72.5 L50 95 L11 72.5 L11 27.5 Z" stroke="url(#goldGradient)" stroke-width="2"
+            fill="rgba(251, 191, 36, 0.05)" />
+          <!-- Stylized R and F -->
+          <path d="M35 35 L45 35 L45 65 M35 50 L43 50" stroke="url(#goldGradient)" stroke-width="5"
+            stroke-linecap="round" />
+          <path d="M55 35 L65 35 L55 65 M55 50 L63 50" stroke="url(#goldGradient)" stroke-width="5"
+            stroke-linecap="round" />
+          <!-- Trend Arrow -->
+          <path d="M25 75 L40 60 L55 70 L75 45" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round">
+            <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="2s" infinite />
+          </path>
+          <path d="M68 45 L75 45 L75 52" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="spinner"></div>
+      <p class="loading-text">SHARK GROUP</p>
+    </div>
+  </div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
